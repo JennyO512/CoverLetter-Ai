@@ -1,0 +1,53 @@
+<!--DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cover Letter Ai</title>
+    </head>
+    <body>
+        Cover Letter Ai
+    </body>
+</html-->
+
+<!DOCTYPE html>
+<head>
+  <title>Cover Letter Ai</title>
+  <link
+    rel="shortcut icon"
+    href="{{ url_for('static', filename='coverltr.png') }}"
+  />
+  <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" />
+</head>
+
+<body>
+  <img src="{{ url_for('static', filename='coverltr.png') }}" class="icon" />
+  <h2>Generate a Uniquely Designed Cover Letter</h2>
+  <h2>Using the latest Artificial Intellegence</h2>
+
+  <form method="POST" action="/search">
+    <form method="POST" action="/submit">
+    <label for="user_input">Enter your text:</label>
+    <input type="text" id="user_input" name="user_input">
+    <input type="submit" value="Save">
+</form>
+
+
+
+    <!--input type="text" id="prompt" name="user_input"-->
+    <!--input type="text" name="query">
+    <input type="submit" value="Search"-->
+</form>
+<div>
+  <p>Your search query: {{ user_input }}</p>
+  <p>ChatGPT Response: {{ response }}</p>
+
+    <form method="POST" action="/submit">
+    <textarea name="user_input"></textarea>
+    <input type="submit" value="Save">
+</form>
+</div>
+  {% if result %}
+  <div class="result">{{ result }}</div>
+  {% endif %}
+</body>
