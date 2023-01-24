@@ -19,7 +19,7 @@ def submit():
 
 @app.route('/search', methods=['POST'])
 def search(prompt):
-    openai.api_key = "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"
+    openai.api_key = "YOUR API-KEY HERE"
     response = openai.Completion.create(engine="text-davinci-002", prompt=prompt)
     return response["choices"][0]["text"]
      
@@ -41,7 +41,7 @@ if __name__ == '__main__':
 #from flask import Flask, redirect, render_template, request, url_for
 
 #app = Flask(__name__)
-#openai.api_key = os.getenv("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")
+#openai.api_key = os.getenv("your API-KEY")
 
 
 
