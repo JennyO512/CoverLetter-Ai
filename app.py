@@ -1,81 +1,48 @@
-import openai 
-from flask import Flask, request, render_template
+from flask import Flask, render_template, request
+import openai
+import docx
+from docx import Document
 
 app = Flask(__name__)
 
-@app.route('/')
-def index():
-    return render_template('index.html')
+@app.route('/', methods=['GET'])
+def home():
+    return render_template('home.html')
 
-@app.route('/submit', methods=['POST'])
-def submit():
-    user_input = request.form['user_input']
-
-    with open('output.txt', 'w') as f:
-        f.write(user_input) 
-
-    return 'Successfully wrote to file'
-
-
-@app.route('/search', methods=['POST'])
-def search(prompt):
-    openai.api_key = "YOUR API-KEY HERE"
-    response = openai.Completion.create(engine="text-davinci-002", prompt=prompt)
-    return response["choices"][0]["text"]
-     
-
-def create_js_file(prompt):
-    response = search(prompt)
-    with open('response.js', 'w') as f:
-        f.write(f"var response = '{response}';")
-        
-                     
+@app.route('/create-cover-letter', methods=['POST'])
+def create_cover_letter():
+    # Get the position from the user input
+    position = request.form.get('position')
+    
+    # Get the OpenAI API credentials
+    
+    openai.api_key = "YOUR KEY HERE"
+    
+    # Generate the cover letter using the OpenAI API
+    prompt = f"Create a cover letter for {position} position"
+    completions = openai.Completion.create(
+        engine="text-davinci-002",
+        prompt=prompt,
+        max_tokens=1024,
+        n=1,
+        stop=None,
+        temperature=0.5,
+    )
+    letter = completions.choices[0].text
+    
+    # Create a new word document
+    doc = docx.Document()
+    
+    # Add the cover letter text to the document
+    doc.add_paragraph(letter)
+    
+    # Save the document
+    doc.save('cover_letter.docx')
+    
+    return 'Cover letter created and saved as cover_letter.docx'
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
+    
 
-#import os
-
-#import openai
-#from flask import Flask, redirect, render_template, request, url_for
-
-#app = Flask(__name__)
-#openai.api_key = os.getenv("your API-KEY")
-
-
-
-#@app.route("/", methods=("GET", "POST"))
-#def index():
-#    if request.method == "POST":
-#        animal = request.form["animal"]
-#        response = openai.Completion.create(
-#            model="text-davinci-003",
-#            prompt=generate_prompt(animal),
-#            temperature=0.6,
-#        )
-#        return redirect(url_for("index", result=response.choices[0].text))
-
-#    result = request.args.get("result")
-#    return render_template("index.html", result=result)
-
-
-
-#    '''
-#        <form method="POST" action="/search">
-#            <input type="text" name="query">
-#            <input type="submit" value="Search">
-#        </form>
-#    '''
-
-
-#"""Create a cover letter for a Customer Service Specialist.
-
-#Job: Customer Service
-#Names: Captain Sharpclaw, Agent Fluffball, The Incredible Feline
-#Animal: Dog
-#Names: Ruff the Protector, Wonder Canine, Sir Barks-a-Lot
-#Animal: {}
-#Names:""".format(
-#        animal.capitalize()
-#    )
