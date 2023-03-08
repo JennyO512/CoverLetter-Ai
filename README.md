@@ -10,16 +10,19 @@ This code uses the Flask web framework to create a simple web application. When 
 ![image](https://user-images.githubusercontent.com/99860222/215570017-04685a75-c1f1-49ab-b152-aaa9fcc0f512.png)
 
 ### You will arrive at:
-![image](https://user-images.githubusercontent.com/99860222/215570308-3c63d2e4-814a-4229-8f9e-ff292e77d516.png)
+![HomePage](https://user-images.githubusercontent.com/99860222/223607491-065c2d2f-0346-4167-9264-bb00b9bf4633.png)
+
 
 ### Enter the name of a job title you have applied for in the input box provided and click on Create Cover Letter
-![image](https://user-images.githubusercontent.com/99860222/215570475-6b5c6c85-c1c5-401f-8722-4805252a6c9a.png)
+![position](https://user-images.githubusercontent.com/99860222/223607549-71fd7d42-d4a7-479d-98a5-001877b6f65a.png)
 
-### Example:
-![image](https://user-images.githubusercontent.com/99860222/215570658-f627e2a4-7260-47dc-9b3b-190e98a8b080.png)
 
-### Cover Letter has been created in your project folder and can be exported to your local drive and opened via Microsoft Word:
-![image](https://user-images.githubusercontent.com/99860222/215571060-d95390a6-d4a0-4d3e-b7e5-8fad52b6f504.png)
+### Scroll down and view your starter Cover Letter.  You can copy and paste directly into your favorite text editor and use only what you feel is relevant. 
+
+
+### Cover Letter has been created and is shown in the text box when you scroll down:
+![CoverLetter](https://user-images.githubusercontent.com/99860222/223607969-183aa11c-d67c-4e3a-8970-ea8ce921f413.png)
+
 
 #### Me dropping the mic:
 ![image](https://user-images.githubusercontent.com/99860222/215571932-dc36a660-2f3d-4c31-884a-d6aa5c54b9c2.png)
