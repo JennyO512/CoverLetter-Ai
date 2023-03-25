@@ -1,6 +1,6 @@
 # Cover Letter and Resume Creator
 
-This code uses the Flask web framework to create a simple web application. When the user navigates to the home page, they can enter the position they applied for and submit the form to generate a cover letter. The position is passed to the OpenAI API to generate the cover letter, and the response is then saved to a word document named "cover_letter.docx" in the root of your project. 
+This code uses the Flask web framework to create a simple web application. When the user navigates to the home page, they can enter the position they applied for and submit the form to generate a cover letter. The position is passed to the OpenAI API to generate the cover letter, and the response is then saved to a word document named "cover_letter.docx" in the root of your project. The link to this project is: https://cover-letter-assist.fly.dev/ and this project is being hosted by https://fly.io/. I can honestly say in my opinion that fly.io was so easy to use. Their documentation was easy to read and their UX is really nice.  I don't work there but I recommend fly.io for hosting your projects. 
 
 
 ### In your terminal enter 'flask run'
