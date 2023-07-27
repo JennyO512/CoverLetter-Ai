@@ -1,8 +1,8 @@
 # Professional Cover Letter and Resume Generator
 
-This application employs the Flask web framework to provide a streamlined web service. Upon visiting the home page, users can input the title of the position they are applying for and submit the form to initiate the creation of a tailored cover letter. The job title is processed through the OpenAI API to generate a unique cover letter, which is subsequently stored in a Word document named `cover_letter.docx` at the root directory of the project.
+This web application was writting using Python, HTML, CSS and the Flask framework. Upon visiting the home page, users can input the title of the position they are applying for and submit the form to initiate the creation of a tailored cover letter. The job title is processed through the OpenAI API to generate a unique cover letter..
 
-The application is currently hosted at [cover-letter-assist.fly.dev](https://cover-letter-assist.fly.dev/) by the reputable hosting service [fly.io](https://fly.io/). The intuitive interface, easy-to-navigate documentation, and overall user experience offered by fly.io are exceptional. Although I have no professional affiliation with the company, I can confidently endorse fly.io for your project hosting needs based on my personal experience.
+The application is currently hosted at [cover-letter-assist.fly.dev](https://cover-letter-assist.fly.dev/) by the reputable hosting service [fly.io](https://fly.io/). The intuitive interface, easy-to-navigate documentation, and overall user experience offered by fly.io are exceptional. Although I have no professional affiliation with the company, I can confidently say go to fly.io for your next project.
 
 ## Application Walkthrough:
 
